@@ -1,0 +1,27 @@
+<mat-toolbar color="primary">   
+    <span>
+        Next Products
+    </span>
+    <mat-icon aria-hidden="false" aria-label="{2:label} icon">echo</mat-icon>
+    <span [ngClass] = "'filler'"></span>
+    <mat-form-field>
+        <input matInput type="text" [(ngModel)]="brandName">
+        <button mat-icon-button (click)="show()">
+            <mat-icon aria-label="label">search</mat-icon>
+        </button>
+    </mat-form-field>
+    <span [ngClass]="'filler'"></span>
+    <button mat-raised-button [routerLink]="['/signup']" routerLinkActive="true" color="accent" >Sign Up</button> 
+    <button mat-raised-button [routerLink]="['/login']" routerLinkActive="true" color="primary" >Sign In</button> 
+
+</mat-toolbar>
+<mat-toolbar>
+    <span>
+        <mat-icon aria-hidden = "false" aria-label ="{2:label} icon">menu</mat-icon>
+    </span>
+    <button mat-button [routerLink]="['/home']">Home</button>
+    <div *ngFor="let category of categories">
+        <button mat-button [routerLink]="['/product',category.toLowerCase()]">{{category}}</button>
+    </div>
+    
+</mat-toolbar>

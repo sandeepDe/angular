@@ -1,0 +1,26 @@
+
+
+<div class="main-c">
+
+<div class="test" *ngFor="let product of products" color="accent">
+
+    <mat-card class="main-container">
+        <mat-card-header>
+            <div mat-card-img >
+                <img src="{{product.productImg}}">
+            </div>
+
+            <mat-card-title>{{product.productName}}</mat-card-title>
+            <mat-card-subtitle>{{product.price | currency :'Rs. '}}</mat-card-subtitle>
+        </mat-card-header>
+        <mat-card-content>
+            {{product.description}}
+        </mat-card-content>
+        <mat-card-actions>
+            <button mat-raised-button color="accent" (click)="onSubmit(product)">View Details</button>
+            <button mat-raised-button color="primary" >Add to cart</button>
+            </mat-card-actions>
+    </mat-card>
+    </div>
+</div>
+    

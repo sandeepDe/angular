@@ -1,0 +1,19 @@
+.main-c{
+    display: felx;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+
+
+}
+
+
+.main-container{
+    border-radius: 10px;
+    width:100%;
+    margin: 7px;
+    box-shadow: 10px 5px 5px grey;
+    margin-bottom: 5px;;
+}
+
